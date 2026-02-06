@@ -3,85 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Pets Clinic | عيادة بلوم بيتس</title>
+    <title>Bloom Pets Clinic | الرعاية الأفضل لحيوانك الأليف</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; text-align: center; color: #333; line-height: 1.6; }
-        .header { background: #f8f9fa; padding: 40px 20px; }
-        .logo { max-width: 150px; margin-bottom: 20px; }
-        .container { padding: 20px; max-width: 800px; margin: auto; }
-        
-        /* تنسيق زرار الواتساب */
+        :root {
+            --primary-color: #4a148c; /* لون بنفسجي فخم زي Vetmas */
+            --accent-color: #ff4081;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section - زى موقع Vetmas */
+        .hero {
+            background: linear-gradient(rgba(74, 20, 140, 0.7), rgba(74, 20, 140, 0.7)), 
+                        url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card i { font-size: 40px; color: var(--primary-color); }
+
+        /* Reviews Section - اللى أنت جبتها */
+        .reviews {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .review-box {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-left: 5px solid var(--primary-color);
+            background: var(--bg-light);
+            font-style: italic;
+        }
+
+        /* WhatsApp Button */
         .whatsapp-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
             color: white;
-            padding: 12px 25px;
+            padding: 15px 25px;
             border-radius: 50px;
-            display: flex;
-            align-items: center;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             z-index: 1000;
-            transition: 0.3s;
         }
-        .whatsapp-btn:hover { transform: scale(1.05); background-color: #128c7e; }
-        .whatsapp-btn img { width: 25px; margin-left: 10px; }
-
-        /* قسم الريفيوهات */
-        .review-card {
-            background: #fff5f8;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-right: 5px solid #ff4081;
-            text-align: right;
-        }
-        .stars { color: #ffca08; }
-        
-        .footer { background: #333; color: white; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="https://via.placeholder.com/150?text=Bloom+Pets+Logo" alt="Bloom Pets Clinic Logo" class="logo">
+    <section class="hero">
         <h1>Bloom Pets Clinic</h1>
-        <p>الرعاية الأفضل لحيوانك الأليف في مدينة العبور</p>
-    </div>
+        <p>العيادة البيطرية الأفضل في مدينة العبور. نحن نهتم بصحة وسعادة أصدقائكم الألياف بأعلى معايير المهنية.</p>
+        <a href="#contact" style="background: var(--accent-color); color: white; padding: 10px 30px; border-radius: 25px; text-decoration: none; margin-top: 20px;">اكتشف خدماتنا</a>
+    </section>
 
-    <div class="container">
-        <h2>آراء عملائنا ⭐</h2>
-        
-        <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"This is the best veterinary clinic in Obour City... The staff are very caring and truly professional."</p>
-            <strong>- Fatima Magamadova</strong>
+    <section class="services">
+        <div class="service-card">
+            <h3>الكشف العام</h3>
+            <p>فحص شامل لضمان سلامة حيوانك الأليف.</p>
         </div>
-
-        <div class="review-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>"I have visited three different veterinary clinics in El Obour, and this is by far the best one."</p>
-            <strong>- Mohamed Magdy</strong>
+        <div class="service-card">
+            <h3>التطعيمات</h3>
+            <p>حماية كاملة ضد الأمراض والعدوى.</p>
         </div>
+        <div class="service-card">
+            <h3>الجراحة والعمليات</h3>
+            <p>غرفة عمليات مجهزة بأحدث التقنيات.</p>
+        </div>
+    </section>
 
-        <hr>
+    <section class="reviews">
+        <h2>ماذا يقول عملاؤنا؟</h2>
+        <div class="review-box">
+            "This is the best veterinary clinic in Obour City... The staff are very caring and truly professional."
+            <br><strong>- Fatima Magamadova</strong>
+        </div>
+        <div class="review-box">
+            "The doctors are very professional, kind, and patient. Highly recommended."
+            <br><strong>- Passant Ali</strong>
+        </div>
+    </section>
 
-        <h3>تواصل معنا</h3>
-        <p>📍 <b>العنوان:</b> ش أبو حنيفة النعمان بجوار صيدلية عمـران، أمام مسجد الغفور الرحيم - الحي السادس - العبور</p>
-        <p>📞 <b>رقم الهاتف:</b> 01126583617</p>
-    </div>
+    <section id="contact" style="padding: 50px; text-align: center; background: var(--primary-color); color: white;">
+        <h2>تواصل معنا الآن</h2>
+        <p>📍 ش أبو حنيفة النعمان بجوار صيدلية عمـران، العبور</p>
+        <p>📞 01126583617</p>
+    </section>
 
     <a href="https://wa.me/201126583617" class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        <span>احجز موعد في Bloom Pets</span>
+        <span>تواصل معنا عبر واتساب</span>
     </a>
-
-    <div class="footer">
-        <p>© 2026 Bloom Pets Clinic - Designed with Care</p>
-    </div>
 
 </body>
 </html>

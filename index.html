@@ -153,11 +153,11 @@
 
 </body>
 </html>
-/* تنسيق زرار الواتساب */
+<style>
 .whatsapp-btn {
     position: fixed;
     bottom: 20px;
-    right: 20px; /* هيظهر على اليمين أسفل الشاشة */
+    right: 20px;
     background-color: #25d366;
     color: white;
     padding: 10px 20px;
@@ -168,30 +168,14 @@
     font-weight: bold;
     box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
     z-index: 1000;
-    transition: transform 0.3s ease;
 }
-
-.whatsapp-btn:hover {
-    transform: scale(1.1); /* بيكبر شوية لما الماوس يجي عليه */
-    background-color: #128c7e;
-}
-
 .whatsapp-btn img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px; /* مسافة بين الأيقونة والكلام */
+    width: 25px;
+    margin-left: 10px;
 }
+</style>
 
-/* لإخفاء النص في الموبايلات الصغيرة وإظهار الأيقونة فقط */
-@media (max-width: 480px) {
-    .whatsapp-btn span {
-        display: none;
-    }
-    .whatsapp-btn {
-        padding: 10px;
-        border-radius: 50%;
-    }
-    .whatsapp-btn img {
-        margin-left: 0;
-    }
-}
+<a href="https://wa.me/201011609914" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <span>تواصل معنا</span>
+</a>
